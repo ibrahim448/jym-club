@@ -1,0 +1,31 @@
+.cart-btn{
+    background-color: rgb(228, 228, 228);
+    padding: 20px 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cart-btn button{
+    background-color: #fff;
+    border: 0;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.cart-btn button:focus{
+    background-color: #e80f0f;
+    color: #fff;
+}
+.exercise-details h2{
+    background-color: #cdcdcd;
+    padding: 20px 0px 20px 20px;
+    border-radius: 8px;
+}
+.exercise-details .span{
+    margin-left: 60px;
+    color: #fff;
+}
