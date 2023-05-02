@@ -26,6 +26,9 @@
     border-radius: 8px;
 }
 .exercise-details .span{
-    margin-left: 60px;
     color: #fff;
+}
+.exercise-details .span-break{
+    margin-left: 25px;
+    color: #e80f0f;
 }

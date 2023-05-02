@@ -7,6 +7,8 @@ import JymCart from '../JymCart/JymCart';
 const JymClab = () => {
 
     const [products, setProducts] = useState([]);
+    ////break time state
+    const [breakTime, setBreakTime] = useState("00");
 
     useEffect( ()=>{
 
@@ -15,9 +17,14 @@ const JymClab = () => {
         .then(data => setProducts(data))
 
 
-    }, [])
+    }, []);
 
-
+    ///break time show eventHandler
+    const breakTimeEventHandler1 = ()=> setBreakTime(10);
+    const breakTimeEventHandler2 = ()=> setBreakTime(20);
+    const breakTimeEventHandler3 = ()=> setBreakTime(30);
+    const breakTimeEventHandler4 = ()=> setBreakTime(40);
+    const breakTimeEventHandler5 = ()=> setBreakTime(50);
 
     return (
         <div className='body'>
@@ -35,7 +42,14 @@ const JymClab = () => {
                 </div>
                 <div className="jym-cart-container">
                    <div className='jym-cart'>
-                        <JymCart></JymCart>
+                        <JymCart breakTime=
+                        {breakTime} 
+                        breakTimeEventHandler1={breakTimeEventHandler1}                       
+                        breakTimeEventHandler2={breakTimeEventHandler2}                       
+                        breakTimeEventHandler3={breakTimeEventHandler3}                       
+                        breakTimeEventHandler4={breakTimeEventHandler4}                       
+                        breakTimeEventHandler5={breakTimeEventHandler5}                       
+                        ></JymCart>
                    </div>
                 </div>
             </div>
