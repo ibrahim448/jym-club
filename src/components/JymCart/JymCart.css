@@ -25,6 +25,10 @@
     padding: 20px 0px 20px 20px;
     border-radius: 8px;
 }
+.exercise-span{
+    margin-left: 20px;
+    color: #e80f0f;
+}
 .exercise-details .span{
     color: #fff;
 }

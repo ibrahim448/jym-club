@@ -9,6 +9,7 @@ const JymClab = () => {
     const [products, setProducts] = useState([]);
     ////break time state
     const [breakTime, setBreakTime] = useState("00");
+    const [productTimes, setProductTimes] = useState([]);
 
     useEffect( ()=>{
 
@@ -18,6 +19,13 @@ const JymClab = () => {
 
 
     }, []);
+
+    /// product handler
+
+    const productHandler = (product)=>{
+        let newCart = [...productTimes, product];
+        setProductTimes(newCart);
+    }
 
     ///break time show eventHandler
     const breakTimeEventHandler1 = ()=> setBreakTime(10);
@@ -36,7 +44,11 @@ const JymClab = () => {
                     </nav>
                     <div className="products">
                         {
-                            products.map(product => <Product key={product.key} product={product}></Product>)
+                            products.map(product => 
+                            <Product key={product.key} 
+                            product={product} 
+                            productHandler={productHandler}
+                            ></Product>)
                         }
                     </div>
                 </div>
@@ -44,6 +56,7 @@ const JymClab = () => {
                    <div className='jym-cart'>
                         <JymCart breakTime=
                         {breakTime} 
+                        productTimes={productTimes}
                         breakTimeEventHandler1={breakTimeEventHandler1}                       
                         breakTimeEventHandler2={breakTimeEventHandler2}                       
                         breakTimeEventHandler3={breakTimeEventHandler3}                       

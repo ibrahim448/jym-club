@@ -2,8 +2,12 @@ import React from 'react';
 import "./JymCart.css";
 
 const JymCart = (props) => {
-    const{breakTime, breakTimeEventHandler1,breakTimeEventHandler2,breakTimeEventHandler3,breakTimeEventHandler4,breakTimeEventHandler5} = props;
-    console.log(breakTime)
+    const{breakTime, breakTimeEventHandler1,breakTimeEventHandler2,breakTimeEventHandler3,breakTimeEventHandler4,breakTimeEventHandler5,productTimes} = props;
+    
+    let time = 0;
+    for(const product of productTimes){
+        time = time + parseFloat(product.time);
+    }
     return (
         <div>
             <h1>Add A Break</h1>
@@ -16,7 +20,7 @@ const JymCart = (props) => {
             </div>
             <h1>Exercise Details:</h1>
             <div className='exercise-details'>
-                <h2>Exercise Time:</h2>
+                <h2>Exercise Time: <span className='exercise-span'>{time}s</span></h2>
                 <h2>Break Time: <span className='span-break'>{breakTime} <small className='span'>second</small></span></h2>
             </div>
         </div>
